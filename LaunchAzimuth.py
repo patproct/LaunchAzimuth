@@ -80,15 +80,22 @@ def main():
     heading = az[0] / pi_conv
     delta_v = vOrb - vBoost(az[1],az[2])
     
+    # Printed outputs -----------------------------------------
     print "Launch azimuth in degrees:"
     print heading
     print 180 - heading
-    print "\nDelta-v required less drag losses:"
-    print vOrb - delta_v
+    
     print "\nOrbital speed in meters per second:"
     print vOrb
+    
+    print "\nDelta-v required, less drag losses:"
+    print vOrb - delta_v
+    
     print "\nSpeed saved in meters per second:"
     print delta_v
+    
+    # Returned outputs ----------------------------------------
+    return_array = np.array([vOrb, vRot, beta_inert, heading, delta_v])
     
 if __name__ == "__main__":
     main()
