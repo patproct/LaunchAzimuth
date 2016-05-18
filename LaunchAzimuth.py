@@ -70,6 +70,7 @@ def main():
     altitude = args.alt
     latitude = args.lat * pi_conv
     
+    # If the targeted inclination is less than the latitude of the launch site, kill the script
     if np.absolute(args.inc) < np.absolute(args.lat):
         sys.exit("Launch site latitude cannot be less than the orbital inclination.")
     

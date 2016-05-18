@@ -24,6 +24,7 @@ Requires: `numpy`
 
 ## Outputs
 
+No returned outputs yet. Outputs are printed when this module is executed from the command line.
 
 ## Next steps/refinements
 * Add ability to call this from another Python script, without need for command line arguments
