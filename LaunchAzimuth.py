@@ -83,6 +83,8 @@ def main():
     print "Launch azimuth in degrees:"
     print heading
     print 180 - heading
+    print "\nDelta-v required less drag losses:"
+    print vOrb - delta_v
     print "\nOrbital speed in meters per second:"
     print vOrb
     print "\nSpeed saved in meters per second:"
