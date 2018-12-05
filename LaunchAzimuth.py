@@ -15,7 +15,7 @@ earth = np.array([5.972e+24, 6.371e+6, grav_const, 86164, 300000, 28.5])
 
 # Change this variable to 'kerbin' if you want to find a launch azimuth
 # in Kerbal Space Program. Be sure to mind your cmd line args if you change this.
-planet = kerbin64
+planet = earth
 
 def trueAlt(alt):
     # returns planetary radius plus altitude ASL
@@ -90,7 +90,7 @@ def main():
     print "\nOrbital speed in meters per second:"
     print vOrb
     
-    print "\nDelta-v required, less drag losses:"
+    print "\nDelta-v required, less gravity/drag losses:"
     print vOrb - delta_v
     
     print "\nSpeed saved in meters per second:"
