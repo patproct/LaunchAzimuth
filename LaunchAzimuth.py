@@ -10,11 +10,12 @@ import numpy as np
 grav_const = 6.67384e-11
 # planet mass, equatorial radius, grav const, rotational period, orbital altitide, launch site latitude
 kerbin = np.array([5.2916e+22, 6e+5, grav_const, 21600, 85000, 0])
+kerbin64 = np.array([2.1675e+24, 3.84e+6, grav_const, 86400, 100000, 0.1])
 earth = np.array([5.972e+24, 6.371e+6, grav_const, 86164, 300000, 28.5])
 
 # Change this variable to 'kerbin' if you want to find a launch azimuth
 # in Kerbal Space Program. Be sure to mind your cmd line args if you change this.
-planet = earth
+planet = kerbin64
 
 def trueAlt(alt):
     # returns planetary radius plus altitude ASL
