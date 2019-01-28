@@ -60,7 +60,7 @@ def main():
     # International Space Station and an initial orbital altitude of 300 kilometers.
     parser = argparse.ArgumentParser(usage=__doc__)
     parser.add_argument("--inc", type=np.float16, default=51.6, help="target orbital inclination")
-    parser.add_argument("--alt", type=np.uint64, default=planet[4], help="target orbital ASL in meters")
+    parser.add_argument("--alt", type=np.float16, default=planet[4], help="target orbital ASL in meters")
     parser.add_argument("--lat", type=np.float32, default=planet[5], help="latitude of the launch site")
     args = parser.parse_args()
     
@@ -70,6 +70,10 @@ def main():
     inclination = args.inc * pi_conv
     altitude = args.alt
     latitude = args.lat * pi_conv
+    
+    # If the targeted altitude is below the altitude of the launch site, kill the script
+    if altitude < 0:
+        sys.exit("Targeted orbital altitude must be above sea level.")
     
     # If the targeted inclination is less than the latitude of the launch site, kill the script
     if np.absolute(args.inc) < np.absolute(args.lat):
