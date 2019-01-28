@@ -82,10 +82,18 @@ def main():
     heading = az[0] / pi_conv
     delta_v = vOrb - vBoost(az[1],az[2])
     
+    if heading < 0:
+        heading1 = heading + 360
+    else:
+        heading1 = heading
+    
+    heading2 = 180 - heading
+    
     # Printed outputs -----------------------------------------
     print "Launch azimuth in degrees:"
-    print heading
-    print 180 - heading
+    print heading1
+    if heading1 != heading2:
+        print 180 - heading
     
     print "\nOrbital speed in meters per second:"
     print vOrb
