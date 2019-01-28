@@ -12,15 +12,15 @@ Requires: `numpy`
 * Inclination
 	* (*Optional*)
 	* Targeted orbital inclination, relative to equator, measured in degrees
-	* example: `--inc=51.6`
+	* default: `--inc=51.6`
 * Altitude
 	* (*Optional*)
 	* Targeted orbital altitude in meters above sea level (must be greater than 0)
-	* example: `--alt=300000`
+	* default: `--alt=300000`
 * Latitude
 	* (*Optional*)
-	* Degrees latitude above or below the equator (must be greater than 0)
-	* example: `--inc=28.5`
+	* Degrees latitude above or below the equator (must be less than or equal to `inclination`)
+	* default: `--inc=28.5`
 
 ## Outputs
 
