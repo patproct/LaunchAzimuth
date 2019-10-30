@@ -5,7 +5,7 @@ I initially wrote this code to calculate proper launch azimuths for launching ro
 
 The altitude of the launch site is assumed to be roughly equal to sea level. Default values are for a launch from Kennedy Space Center to a 300x300 km orbit parellel to the International Space Station (51.6°).
 
-Requires: `numpy`
+Requires: `python3`, `numpy`
 
 ## Inputs
 

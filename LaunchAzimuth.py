@@ -60,7 +60,7 @@ def main():
     # International Space Station and an initial orbital altitude of 300 kilometers.
     parser = argparse.ArgumentParser(usage=__doc__)
     parser.add_argument("--inc", type=np.float16, default=51.6, help="target orbital inclination")
-    parser.add_argument("--alt", type=np.float16, default=planet[4], help="target orbital ASL in meters")
+    parser.add_argument("--alt", type=np.float32, default=planet[4], help="target orbital ASL in meters")
     parser.add_argument("--lat", type=np.float32, default=planet[5], help="latitude of the launch site")
     args = parser.parse_args()
     
@@ -94,19 +94,19 @@ def main():
     heading2 = 180 - heading
     
     # Printed outputs -----------------------------------------
-    print "Launch azimuth in degrees:"
-    print heading1
+    print("Launch azimuth in degrees:")
+    print(heading1)
     if heading1 != heading2:
-        print 180 - heading
+        print(180 - heading)
     
-    print "\nOrbital speed in meters per second:"
-    print vOrb
+    print("\nOrbital speed in meters per second:")
+    print(vOrb)
     
-    print "\nDelta-v required, less gravity/drag losses:"
-    print vOrb - delta_v
+    print("\nDelta-v required, less gravity/drag losses:")
+    print(vOrb - delta_v)
     
-    print "\nSpeed saved in meters per second:"
-    print delta_v
+    print("\nSpeed saved in meters per second:")
+    print(delta_v)
     
     # Returned outputs ----------------------------------------
     return_array = np.array([vOrb, vRot, beta_inert, heading, delta_v])
