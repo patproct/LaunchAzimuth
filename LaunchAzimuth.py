@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Written by Patrick Proctor
 # on August 25, 2015
 # https://github.com/patproct
